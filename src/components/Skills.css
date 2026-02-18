@@ -1,0 +1,40 @@
+.skills {
+  padding: 4rem 2rem;
+  background: transparent; /* Inherit dark from root */
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: rgba(20, 20, 20, 0.9); /* Dark card */
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 1.5rem 0.5rem;
+  transition: transform 0.3s;
+  backdrop-filter: blur(2px);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  border-color: #ff4500; /* Red hover for Limbus theme */
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #ffd966; /* Gold for icons */
+}
+
+.skill-card p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e0e0e0; /* Light text */
+}

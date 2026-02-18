@@ -1,0 +1,148 @@
+/* src/components/wiki/CharacterList.css */
+.wiki-section {
+  padding: 6rem 2rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: rgba(10, 10, 10, 0.95);
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+.wiki-back { margin-bottom: 2rem; }
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffd966;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #ffd966;
+  border-radius: 6px;
+  background: rgba(255, 217, 102, 0.08);
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  background: #ffd966;
+  color: #0a0a0a;
+}
+
+.wiki-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.wiki-header h1 {
+  font-size: 3.8rem;
+  color: #ffd966;
+  text-shadow: 0 0 20px #ff4500;
+}
+
+.wiki-subtitle {
+  color: #b0b0b0;
+  font-size: 1.6rem;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.4rem;
+  justify-items: center;
+}
+
+.character-card {
+  background: rgba(20, 20, 25, 0.95);
+  border: 3px solid #3a3a3a;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 3 / 4.3;   /* Perfect portrait ratio */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.character-card:hover {
+  transform: scale(1.07) translateY(-14px);
+  border-color: #ffd966;
+  box-shadow: 0 0 50px rgba(255, 69, 0, 0.6);
+}
+
+.character-image {
+  flex: 0 0 65%;               /* taller image area for portrait */
+  overflow: hidden;
+  background: #0a0a0a;
+  position: relative;
+}
+
+.character-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 28%;     /* focuses on face/upper body */
+  transition: transform 0.6s ease;
+}
+
+.character-card:hover .character-image img {
+  transform: scale(1.18);
+}
+
+.glitch-overlay {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+}
+
+.character-card:hover .glitch-overlay {
+  animation: glitch 0.45s linear infinite;
+}
+
+@keyframes glitch {
+  0%   { clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%); transform: translate(0); }
+  20%  { clip-path: polygon(0 33%, 100% 33%, 100% 66%, 0 66%); transform: translate(-4px, 4px); }
+  40%  { clip-path: polygon(0 66%, 100% 66%, 100% 100%, 0 100%); transform: translate(4px, -4px); }
+  100% { clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%); transform: translate(0); }
+}
+
+.character-info {
+  flex: 1;
+  padding: 1.3rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.character-info h3 {
+  color: #ffd966;
+  margin-bottom: 0.6rem;
+  font-size: 1.65rem;
+}
+
+.character-info p {
+  color: #b0b0b0;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.character-enter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 69, 0, 0.22);
+  color: #ff4500;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.character-card:hover .character-enter {
+  opacity: 1;
+}

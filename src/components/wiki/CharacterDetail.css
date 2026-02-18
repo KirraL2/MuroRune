@@ -1,0 +1,163 @@
+.wiki-section {
+  padding: 6rem 2rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: rgba(10, 10, 10, 0.95);
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+.wiki-back { margin-bottom: 2rem; }
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffd966;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #ffd966;
+  border-radius: 6px;
+  background: rgba(255, 217, 102, 0.08);
+}
+
+.back-btn:hover {
+  background: #ffd966;
+  color: #0a0a0a;
+}
+
+.detail-wrapper {
+  display: flex;                    /* or grid — both work */
+  gap: 4rem;
+  align-items: flex-start;          /* THIS IS THE KEY FIX */
+  min-height: 150vh;                /* forces scroll area for testing */
+}
+
+.detail-left {
+  flex: 0 0 380px;
+  position: sticky;
+  top: 90px;                        /* adjust if you want it lower */
+  align-self: flex-start;
+  height: fit-content;
+  z-index: 10;
+}
+
+.detail-image {
+  width: 100%;
+  aspect-ratio: 9 / 13;        /* Tall portrait ratio */
+  border: 6px solid #ffd966;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(255, 69, 0, 0.7);
+}
+
+.detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 28%;   /* Adjust this number if the face is off (try 25% or 32%) */
+}
+
+.detail-name {
+  font-size: 3.8rem;
+  color: #ffd966;
+  text-shadow: 0 0 30px #ff4500;
+  margin: 1rem 0 0.5rem;
+}
+
+.detail-tagline {
+  font-size: 1.4rem;
+  color: #b0b0b0;
+  margin-bottom: 2rem;
+}
+
+.music-player {
+  background: rgba(20, 20, 25, 0.95);
+  border: 3px solid #ffd966;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 0 30px rgba(255, 69, 0, 0.4);
+}
+
+.music-title {
+  color: #ffd966;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.music-player iframe {
+  border-radius: 8px;
+  border: 2px solid #3a3a3a;
+  width: 100%;
+}
+
+.detail-right {
+  flex: 1;
+  min-width: 0;
+}
+
+.wiki-section-block {
+  background: rgba(20, 20, 25, 0.9);
+  border: 2px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.wiki-section-block h2 {
+  color: #ffd966;
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid #ff4500;
+  padding-bottom: 0.6rem;
+}
+
+.section-text p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #d0d0d0;
+}
+
+/* Relationships */
+.relationships-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.relationship-card {
+  background: rgba(30, 30, 35, 0.95);
+  border: 2px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 1.2rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s;
+}
+
+.relationship-card:hover {
+  border-color: #ffd966;
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.3);
+}
+
+.rel-type { font-size: 0.95rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.4rem; }
+.relationship-card.close-ally .rel-type { color: #b3ff9e; }
+.relationship-card.rival .rel-type { color: #ff6b6b; }
+.relationship-card.mentor .rel-type { color: #ffd966; }
+
+.rel-name { font-size: 1.5rem; color: #ffd966; margin-bottom: 0.5rem; }
+.rel-note { color: #b0b0b0; font-size: 1rem; line-height: 1.5; }
+
+/* Mobile */
+@media (max-width: 968px) {
+  .detail-wrapper { 
+    grid-template-columns: 1fr;       /* stack on mobile */
+    gap: 3rem;
+  }
+  .detail-left {
+    position: static;                 /* no sticky on small screens */
+  }
+}

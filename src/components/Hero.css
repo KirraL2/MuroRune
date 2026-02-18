@@ -1,0 +1,94 @@
+/* src/components/Hero.css */
+.hero {
+  height: 100vh;                /* full viewport height */
+  width: 100%;
+  background-image: url('/public/images/index-proxy-don-hero.jpg'); /* path from public folder */
+  background-size: cover;       /* make image cover entire area */
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;          /* center content vertically */
+  justify-content: center;      /* center content horizontally */
+  text-align: center;
+  color: white;                 /* adjust text color to stand out */
+  /* optional: add a dark overlay to make text more readable */
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* semi-transparent overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;                   /* place text above overlay */
+}
+
+.hero-title {
+  font-size: 5.8rem;
+  font-family: 'VT323', monospace;
+  font-weight: 400;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  
+  /* Don Quixote-inspired gradient */
+  background: linear-gradient(
+    90deg,
+    #ffd966 0%,
+    #ffaa00 25%,
+    #ff4500 50%,
+    #ff6b00 75%,
+    #ffd966 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Intense multi-layer glow */
+  text-shadow:
+    0 0 15px #ffd966,
+    0 0 30px #ffaa00,
+    0 0 50px #ff4500,
+    0 0 70px #ff4500,
+    0 0 90px rgba(255, 69, 0, 0.6);
+
+  /* Subtle distortion pulse (feels very Limbus) */
+  animation: don-glow 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes don-glow {
+  from {
+    text-shadow:
+      0 0 15px #ffd966,
+      0 0 30px #ffaa00,
+      0 0 50px #ff4500;
+  }
+  to {
+    text-shadow:
+      0 0 25px #ffd966,
+      0 0 45px #ffaa00,
+      0 0 70px #ff4500,
+      0 0 100px #ff4500;
+  }
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* optional: make it responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}

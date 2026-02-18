@@ -1,0 +1,109 @@
+/* src/components/wiki/CategoryList.css */
+.wiki-section {
+  padding: 6rem 2rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: rgba(10, 10, 10, 0.95);
+  color: #e0e0e0;
+}
+
+.wiki-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.wiki-header h1 {
+  font-size: 3.8rem;
+  color: #ffd966;
+  text-shadow: 0 0 15px #ff4500;
+  letter-spacing: 4px;
+}
+
+.wiki-subtitle {
+  color: #b0b0b0;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.category-card {
+  background: rgba(20, 20, 25, 0.95);
+  border: 2px solid #3a3a3a;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.category-card:hover {
+  border-color: #ffd966;
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 217, 102, 0.25);
+}
+
+.category-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.category-card:hover .category-image img {
+  transform: scale(1.08);
+}
+
+.category-info {
+  padding: 1.5rem;
+}
+
+.category-info h3 {
+  color: #ffd966;
+  margin-bottom: 0.8rem;
+  font-size: 1.7rem;
+}
+
+.category-enter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 69, 0, 0.15);
+  color: #ff4500;
+  text-align: center;
+  padding: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 1.05rem;
+}
+
+/* Add to the bottom of CategoryList.css (or any wiki css file) */
+.wiki-back {
+  margin-bottom: 2rem;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffd966;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #ffd966;
+  border-radius: 6px;
+  background: rgba(255, 217, 102, 0.08);
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  background: #ffd966;
+  color: #0a0a0a;
+  transform: translateX(-6px);
+}

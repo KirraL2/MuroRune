@@ -1,0 +1,125 @@
+.animes {
+  padding: 4rem 2rem;
+  background: transparent;
+  text-align: center;
+}
+
+.anime-grid {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.anime-card {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid #3a3a3a;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  backdrop-filter: blur(2px);
+}
+
+.anime-card:hover {
+  transform: translateY(-5px);
+}
+
+.anime-image {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.anime-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.anime-card:hover .anime-image img {
+  transform: scale(1.1);
+}
+
+.anime-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.anime-card:hover .anime-overlay {
+  opacity: 1;
+}
+
+.anime-rating {
+  color: #ffd700;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.anime-link {
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.anime-link:hover {
+  background: white;
+  color: black;
+}
+
+.anime-info {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.anime-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.anime-info p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.anime-info h3 {
+  color: #ffd966;
+}
+
+.anime-info p {
+  color: #b0b0b0;
+}
+
+.anime-overlay {
+  background: rgba(10, 10, 10, 0.85);
+}
+
+.anime-rating {
+  color: #b3ff9e;  /* greenish */
+}
+
+.anime-link {
+  border-color: #b3ff9e;
+  color: #b3ff9e;
+}
+
+.anime-link:hover {
+  background: #b3ff9e;
+  color: #0a0a0a;
+}
