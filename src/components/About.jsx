@@ -21,7 +21,7 @@ function About() {
               find me exploring new technologies or reading.
             </p>
             <p>
-                ─────────────────────────────────────
+                ─────────────────────────
             </p>
             <p>
               I lwk just made this for fun-
