@@ -3,7 +3,7 @@ const wikiData = [
   {
     id: 1,
     title: 'My Distortions',
-    image: '/public/images/ocCategorybg.png',
+    image: '/images/ocCategorybg.png',
     content: `
       These are my original characters (OCs).
     `,
@@ -13,7 +13,7 @@ const wikiData = [
   {
     id: 2,
     title: 'My Friends!',
-    image: '/public/images/fwendsBG.jpg',
+    image: '/images/fwendsBG.jpg',
     content: `
       These are my Friends, yes.
     `,
