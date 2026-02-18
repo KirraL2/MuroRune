@@ -152,12 +152,29 @@
 .rel-note { color: #b0b0b0; font-size: 1rem; line-height: 1.5; }
 
 /* Mobile */
+/* Mobile */
 @media (max-width: 968px) {
   .detail-wrapper { 
-    grid-template-columns: 1fr;       /* stack on mobile */
+    flex-direction: column;
     gap: 3rem;
   }
   .detail-left {
-    position: static;                 /* no sticky on small screens */
+    position: static;
+    flex: none;
+    width: 100%;
+    max-width: none;
+  }
+  .detail-image {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .detail-name {
+    font-size: 2.8rem;
+  }
+  .detail-tagline {
+    font-size: 1.25rem;
+  }
+  .music-player {
+    margin-top: 1rem;
   }
 }

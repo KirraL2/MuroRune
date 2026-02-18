@@ -123,3 +123,23 @@
   background: #b3ff9e;
   color: #0a0a0a;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .animes {
+    padding: 3rem 1rem;
+  }
+  .anime-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  .anime-image {
+    height: 160px;
+  }
+  .anime-info h3 {
+    font-size: 1.35rem;
+  }
+  .anime-info p {
+    font-size: 0.95rem;
+  }
+}

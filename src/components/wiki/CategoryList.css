@@ -107,3 +107,26 @@
   color: #0a0a0a;
   transform: translateX(-6px);
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .wiki-section {
+    padding: 4rem 1rem 3rem;
+  }
+  .wiki-header h1 {
+    font-size: 2.8rem;
+  }
+  .wiki-subtitle {
+    font-size: 1.3rem;
+  }
+  .category-grid {
+    grid-template-columns: 1fr;           /* stack cards vertically */
+    gap: 1.8rem;
+  }
+  .category-image img {
+    height: 180px;
+  }
+  .category-info h3 {
+    font-size: 1.5rem;
+  }
+}

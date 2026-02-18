@@ -146,3 +146,27 @@
 .character-card:hover .character-enter {
   opacity: 1;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .wiki-section {
+    padding: 4rem 1rem 3rem;
+  }
+  .wiki-header h1 {
+    font-size: 2.8rem;
+  }
+  .character-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.8rem;
+  }
+  .character-card {
+    max-width: 100%;
+    aspect-ratio: 3 / 4;
+  }
+  .character-image {
+    flex: 0 0 60%;
+  }
+  .character-info h3 {
+    font-size: 1.5rem;
+  }
+}

@@ -84,11 +84,12 @@
 }
 
 /* optional: make it responsive */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    letter-spacing: 4px;
   }
   .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
