@@ -15,7 +15,7 @@ const characters = [
       },
       {
         title: "Appearance",
-        content: "Rune has bright golden hair, wears a black coat with golden accents and chains, and a clock-like mask that covers half their face."
+        content: "Rune has bright golden hair, wears a black coat with golden accents and chains."
       },
       {
         title: "Personality",
