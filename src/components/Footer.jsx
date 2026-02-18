@@ -6,10 +6,10 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="social-links">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/KirraL2" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
-          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://twitter.com/Andorei444" target="_blank" rel="noopener noreferrer">
             <FaTwitter />
           </a>
         </div>
