@@ -1,39 +1,68 @@
 .skills {
-  padding: 4rem 1rem;           /* less side padding on mobile */
-  text-align: center;
+  padding: 4rem 1rem 2rem;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));   /* smaller cards */
-  gap: 1.2rem;
-  max-width: 800px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
 }
 
 .skill-card {
-  padding: 1.2rem 0.8rem;
-  transition: transform 0.3s;
+  position: relative;
+  min-height: 155px;
+  padding: 1.2rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(18,18,24,0.96), rgba(13,13,17,0.96));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.85rem;
+  text-align: center;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.25);
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(247,214,106,0.05), transparent 30%, transparent 100%);
+  pointer-events: none;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--line-strong);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.34), var(--glow);
 }
 
 .skill-icon {
-  font-size: 2.8rem;            /* slightly smaller icons */
-  margin-bottom: 0.6rem;
+  font-size: 2.7rem;
+  color: var(--gold);
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .skills {
-    padding: 3rem 1rem;
-  }
+.skill-card p {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.skill-type {
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
   .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-    gap: 1rem;
-  }
-  .skill-card {
-    padding: 1rem 0.6rem;
-  }
-  .skill-icon {
-    font-size: 2.4rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
